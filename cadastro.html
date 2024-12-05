@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Inova Colders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            height: 30px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            max-height: 100%;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search-icon {
+            height: 30px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .search-icon img {
+            max-height: 100%;
+            width: auto;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #2a2a2a;
+            color: #fff;
+            resize: vertical;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #aaa;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row input {
+            flex: 1;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-actions button {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-actions button[type="submit"],
+        section.comentarios button {
+            background-color: #333; /* Preto fosco */
+            color: #fff;
+        }
+
+
+        .form-actions button[type="reset"] {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .form-actions button:hover {
+            opacity: 0.9;
+        }
+
+        /* Estilos para a seção de comentários */
+        section.comentarios {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        section.comentarios h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        section.comentarios textarea {
+            width: 100%;
+            min-height: 150px;
+        }
+
+        section.comentarios button {
+            margin-top: 15px;
+            padding: 10px 20px;
+
+        }
+
+
+        /* Estilos para a notificação */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            opacity: 1;
+        }
+
+        .notification.success {
+            background-color: #28a745; /* Verde */
+            color: white;
+        }
+
+        .notification.success::before {
+            content: "✅"; /* Símbolo de verificado */
+            margin-right: 10px;
+        }
+
+        .notification.feedback {
+            background-color: #17a2b8; /* Azul */
+            color: white;
+        }
+
+        .notification.feedback::before {
+            content: "👍"; /* Ícone de feedback */
+            margin-right: 10px;
+        }
+
+        .notification.error {
+            background-color: #dc3545; /* Vermelho */
+            color: white;
+        }
+
+        .notification.error::before {
+            content: "❌"; /* Símbolo de erro */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="Captura de tela 2024-11-28 092745.png" alt="Logo Inova Colders"></div>
+        <nav>
+            <a href="sobre.html">Sobre</a>
+            <a href="suporte.html">Ajuda</a>
+            <a href="carona.html">Trabalhos</a>
+            <a href="suporte.html">Suporte</a>
+            <a href="cadastro.html">Entrar</a>
+        </nav>
+        
+    </header>
+    <main>
+        <h1>Cadastre-se e receba novidades em seu E-mail</h1>
+        <form id="cadastro-form">
+            <label for="nome">Nome Completo</label>
+            <div class="form-row">
+                <input type="text" id="nome" placeholder="Primeiro nome">
+                <input type="text" placeholder="Sobrenome">
+            </div>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="ex: myname@example.com">
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" placeholder="Endereço">
+            <input type="text" placeholder="Linha 2 do Endereço">
+            <div class="form-row">
+                <input type="text" placeholder="Cidade">
+                <input type="text" placeholder="Estado / Província">
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="CEP">
+                <input type="text" placeholder="País">
+            </div>
+
+            <label for="telefone">Número de Telefone</label>
+            <div class="form-row">
+                <input type="text" placeholder="Código de Área">
+                <input type="text" placeholder="Número de Telefone">
+            </div>
+
+            <label for="nascimento">Data de Nascimento</label>
+            <div class="form-row">
+                <input type="text" placeholder="Mês">
+                <input type="text" placeholder="Dia">
+                <input type="text" placeholder="Ano">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <section class="comentarios">
+        <h2>Deixe seu comentário (Feedback)</h2>
+        <form id="comentario-form">
+            <label for="comentario">Seu comentário:</label>
+            <textarea id="comentario" placeholder="Digite seu comentário aqui..."></textarea>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+    </section>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        const cadastroForm = document.getElementById('cadastro-form');
+        const comentarioForm = document.getElementById('comentario-form');
+        const notification = document.getElementById('notification');
+
+        cadastroForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const endereco = document.getElementById('endereco').value.trim();
+
+            if (nome === "" || email === "" || endereco === "") {
+                showNotification('Por favor, preencha todos os campos obrigatórios (Nome, Email e Endereço).', 'error');
+            } else {
+                showNotification('Cadastrado com sucesso!', 'success');
+                // Aqui você pode adicionar o código para enviar os dados do formulário para o servidor.
+            }
+        });
+
+        comentarioForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            showNotification('Recebemos o seu feedback!', 'feedback');
+        });
+
+        function showNotification(message, type) {
+            notification.textContent = message;
+            notification.classList.add('show', type);
+            setTimeout(() => {
+                notification.classList.remove('show', type);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
