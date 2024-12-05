@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Colders</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center; /* Alinha verticalmente */
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .logo {
+            height: 30px; 
+            width: auto;
+            margin-right: 20px; 
+            margin-left: 20px; 
+        }
+
+        .logo img {
+            max-height: 100%; 
+            width: auto;
+        }
+
+        .menu {
+            margin-left: 50px; 
+            display: flex;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .menu a:hover { /* Adiciona um efeito hover aos links */
+            text-decoration: underline;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            width: 20px;
+            height: auto;
+            margin-left: auto; 
+        }
+
+        .search-icon img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Conteúdo principal */
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Estilos para a seção de suporte */
+        .suporte-tecnico {
+            text-align: left;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .column {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .column h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .column a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .column a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .contact-info img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .suporte-tecnico h1 {
+            text-align: center; /* Centraliza o título */
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) { 
+            .container {
+                grid-template-columns: 1fr; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><img src="Captura_de_tela_2024-12-03_141419-removebg-preview.png" alt="Logo Inova Colders"></div> 
+        <nav class="menu">
+            <a href="sobre.html">Sobre</a>
+            <a href="carona.html">Trabalhos</a>
+            <a href="pagina.html">Home</a>
+            <a href="cadastro.html">Entrar</a>
+        </nav>
+        <div class="search-icon"><img src="Captura_de_tela_2024-12-03_140523-removebg-preview.png" alt="Ícone de busca"></div> 
+    </header>
+    <main class="content">
+        <h1>Endereço Corporativo</h1>
+        <p>Inova Colders<br>Rua Israel, 100 -<br>Jardim Panorama,<br>Salto - SP, 02155-000</p>
+    </main>
+
+    <section class="suporte-tecnico">
+        <h1>Suporte Técnico</h1>
+        <div class="container">
+            <div class="column">
+                <h2>Ajuda</h2>
+                <p>Para fazer login, clique em "Login" no canto superior direito e preencha seu e-mail e senha. Se não tiver uma conta, escolha "Criar Conta". Após o login, use o menu para navegar pelas seções do site, como "Home" e "Produtos". Para ajuda, acesse "Fale Conosco" ou consulte a FAQ. Mantenha suas informações seguras e atualizadas!</p>
+                <h2>Fale Conosco</h2>
+                <div class="contact-info">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                    <p>inovacolders@mail.com</p>
+                </div>
+                <div class="contact-info">
+                    <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Telefone">
+                    <p>+000 123 456 789</p>
+                </div>
+            </div>
+            <div class="column">
+                <h2>Política de privacidade</h2>
+                <p>Informações da maneira que os dados de nossos usuários serão tratados</p>
+                <a href="politica.html">Confira ></a>
+                <h2>Serviços</h2>
+                <p>Confira nossos serviços em “Sobre Nós”. Você também pode nos ajudar em nossa causa comprando produtos!</p>
+                <a href="loja.html">Nossa Loja ></a>
+            </div>
+            <div class="column">
+                <h2>Horário de Atendimento</h2>
+                <p>Dias e horários de disponibilidade para o atendimento ao cliente.</p>
+                <p><strong>Terça/Quinta:</strong> 7:00 - 16:00</p>
+                <h2>Informações de nossa empresa</h2>
+                <p>Saiba mais sobre nossa equipe em “Sobre nós”.</p>
+                <a href="sobre.html">Sobre Nós ></a>
+                <h2>Redes Sociais</h2>
+                <p>Acesse nossas redes para mais informações e novidades!</p>
+                <a href="facebook.com">Facebook ></a><br>
+                <a href="instagram.com">Instagram ></a><br>
+                <a href="linkedin.com">Linkedin ></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

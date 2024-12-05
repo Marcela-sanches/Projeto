@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Coders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            line-height: 1.6;
+            font-family: 'Roboto Condensed', sans-serif;
+            display: flex; /* Habilita o uso do flexbox */
+            flex-direction: column; /* Define a direção como coluna */
+            min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .marca {
+            width: 100px;
+            height: auto;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+            flex-grow: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+        }
+
+        h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-bottom: 1em;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 15px;
+        }
+
+        .social-media img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .contact-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 150px;
+        }
+
+        .contact-button:hover {
+            background-color: #333;
+        }
+
+        .spacer {
+            height: 50px; /* Ajuste este valor para controlar a distância */
+            flex-shrink: 0;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .logo-footer {
+            width: 50px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        footer .footer-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons {
+            margin-right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        footer .social-icons img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="v17_4.png" alt="Logo da Inova Coders" class="logo">
+            <a href="pagina.html"><img src="Captura de tela 2024-11-28 092745.png" alt="Nome da Inova Coders" class="marca"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="suporte.html">Ajuda</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Venha conhecer mais sobre nós!</h1>
+        <p>Somos o grupo de desenvolvedores InovaCoders, selecionado a dedo pelos nossos professores, com uma proposta focada no tema da Mobilidade Sustentável. Ao investir neste tipo de mobilidade, não vamos apenas melhorar a qualidade de vida nas áreas urbanas, mas também contribuir para a mitigação das mudanças climáticas e a preservação do meio ambiente.
+        Nossa proposta com este projeto é criar e apresentar alternativas viáveis para a maioria dos cidadãos, fazendo com que os aspectos climáticos melhorem consideravelmente para que tenhamos uma condição de vida favorável.
+        Com isso, planejamos criar um site onde seja possível ao usuário conhecer o tema, com dinâmicas que prendam a atenção, como jogos interativos (caça-palavras) e opções de carona solidária para grandes eventos, como shows, entre outros.  O site também permitirá que o usuário faça um cadastro para acessar opções mais viáveis conforme sua localização.
+        A mobilidade sustentável é um pilar fundamental para a construção de cidades mais saudáveis, eficientes e inclusivas. Ela se baseia na ideia de reduzir os impactos ambientais e sociais gerados pelos sistemas de transporte tradicionais, promovendo alternativas que priorizem a eficiência energética, a redução da poluição e o bem-estar coletivo. 
+        Com o crescimento das áreas urbanas e o aumento da população, a dependência de veículos particulares movidos a combustíveis fósseis tem gerado desafios como congestionamentos, emissões de gases de efeito estufa e perda de qualidade de vida. Esse cenário destaca a urgência de adotar soluções que equilibrem as necessidades de deslocamento com a preservação ambiental. </p>
+        <p> O motor híbrido é uma tecnologia que combina dois tipos diferentes de propulsão: um motor de combustão interna, geralmente movido a gasolina ou diesel, e um motor elétrico alimentado por baterias. Essa integração busca oferecer o melhor dos dois mundos, aproveitando a eficiência energética do motor elétrico em baixas velocidades e a autonomia do motor a combustão em trajetos mais longos.  
+            O funcionamento de um motor híbrido depende do tipo de sistema utilizado. Em sistemas híbridos leves, o motor elétrico não é capaz de mover o veículo sozinho, mas auxilia o motor a combustão em momentos de maior demanda, como acelerações, além de recuperar energia durante frenagens para recarregar a bateria. Já nos sistemas híbridos completos, o veículo pode operar apenas com o motor elétrico, com o motor de combustão ou com os dois juntos, dependendo das condições de condução. Há ainda os híbridos plug-in, que possuem baterias maiores e podem ser recarregados na tomada, permitindo maior autonomia no modo elétrico. 
+            A importância dos motores híbridos está diretamente ligada à busca por uma mobilidade mais sustentável. Esses sistemas ajudam a reduzir o consumo de combustível e as emissões de gases poluentes, especialmente em trânsito urbano, onde o motor elétrico pode ser amplamente utilizado. Além disso, oferecem uma transição mais suave para veículos totalmente elétricos, promovendo a adoção de tecnologias mais limpas e acessíveis para os consumidores.</p>
+        <p>O motor movido a água, como geralmente imaginado, não existe de forma prática, mas tecnologias baseadas em água, como o uso de hidrogênio, são promissoras. A água pode ser separada em hidrogênio e oxigênio por eletrólise, e o hidrogênio pode servir como combustível limpo, usado em células de combustível para gerar eletricidade ou em motores de combustão. Apesar de sustentável, a produção, armazenamento e transporte de hidrogênio ainda enfrentam desafios técnicos e econômicos, mas seu uso pode ser essencial para a transição energética global.</p>
+        <p>A economia regenerativa é um modelo econômico que vai além da sustentabilidade, buscando restaurar, renovar e revitalizar os sistemas naturais e sociais. Diferente da economia linear, que explora recursos, gera resíduos e causa degradação, a economia regenerativa trabalha para criar processos que imitam os ciclos da natureza, onde nada é desperdiçado e tudo é reaproveitado.
+
+            Esse modelo promove práticas como agricultura regenerativa, design circular de produtos e gestão eficiente de resíduos, com o objetivo de fortalecer ecossistemas, revitalizar comunidades e combater as mudanças climáticas. A economia regenerativa também valoriza a inclusão social, a equidade e a resiliência econômica, priorizando o bem-estar coletivo e a saúde do planeta. 
+            
+            Embora seja um conceito emergente, a economia regenerativa representa uma visão transformadora para equilibrar desenvolvimento econômico com regeneração ambiental e justiça social.</p>
+        <a href="suporte.html" class="contact-button">Fale Conosco!</a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <footer>
+        <img src="v17_4.png" alt="Logo Inova Colders" class="logo-footer">
+        <div class="footer-text">
+            <p>© <script>document.write(new Date().getFullYear());</script> Inova Colders. Todos os direitos reservados.</p>
+            <p>
+                <a href="politica.html">Política de Privacidade</a> |
+                <a href="politica.html">Termos de Uso</a> |
+                <a href="suporte.html">Contato</a>
+            </p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="download (2).png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="pngtree-instagram-social-platform-icon-png-image_8704818.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+                <img src="x-twitter-light-grey-logo-5694251.png" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

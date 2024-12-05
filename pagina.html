@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Colders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@400&family=Inter:wght@300&family=Konkhmer+Sleokchher:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Parte 1 - Define Estilo e cor do corpo e do fundo */
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background-color: black;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Parte 2 - Nessa parte do CSS ele estiliza o cabeçalho da página usando flexbox (módulo CSS que fornece uma maneira eficiente e flexível de organizar itens) para posicionar o logo (imagem e texto), e uma navegação (links). O código define dimensões, espaçamento, cores e transições suaves para os elementos, criando um layout limpo e responsivo */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header .menu-icon {
+            width: 20px;
+            height: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        header .menu-icon div {
+            height: 2px;
+            background-color: white;
+            border-radius: 1px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        header .logo .logo-text {
+            width: auto;
+            height: 24px;
+            margin-left: 8px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        nav a {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #cccccc;
+            text-decoration: underline; /* Essa função faz com que o botão sublinhe ao passar o mouse */
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 60px);
+        }
+
+        .image-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-content img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .text-content h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 60px;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #d1d1d1;
+            margin-bottom: 20px;
+        }
+
+        .text-content a.button { 
+            background-color: #eeeeee;
+            color: #333333;
+            font-family: "Roboto", sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            align-self: start;
+            text-decoration: none; 
+            display: inline-block; 
+        }
+
+        .text-content a.button:hover {
+            background-color: #cccccc;
+            color: #000000;
+            text-decoration: underline; 
+        }
+         /* Parte 4: Estilização de um container para conteúdo de texto e imagem (Motor Híbrido).  Usa grid para o layout. */
+
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .text {
+            padding-left: 20px;
+        }
+
+        .text h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .text h1 .motor {
+            font-family: 'Inter', sans-serif;
+            font-size: 62.25px;
+            font-weight: 300;
+            color: #333;
+            margin-right: 10px;
+            display: inline;
+        }
+
+        .text h1 .hibrido {
+            font-family: 'Konkhmer Sleokchher', sans-serif;
+            font-size: 62.25px;
+            font-weight: 400;
+            color: #333;
+            display: inline;
+        }
+
+        /* Linha fina para separar título e texto */
+        .text h1 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .text p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 17.44px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .text a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #007bff;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .text a:hover {
+            color: #0056b3;
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Novo conteúdo do motor movido a água */
+        .container-water {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-water {
+            padding-left: 20px;
+        }
+
+        .text-water h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .text-water h1 .motor-water {
+            font-family: 'Inter', sans-serif;
+            font-size: 62.25px;
+            font-weight: 300;
+            color: #333;
+            margin-right: 10px;
+            display: inline;
+        }
+
+        .text-water h1 .agua-water {
+            font-family: 'Konkhmer Sleokchher', sans-serif;
+            font-size: 62.25px;
+            font-weight: 400;
+            color: #333;
+            display: inline;
+        }
+
+        /* Linha fina para separar título e texto */
+        .text-water h1 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .text-water p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 17.44px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .text-water a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #007bff;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .text-water a:hover {
+            color: #0056b3;
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+
+        .image-water {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-water img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Economia Regenerativa */
+        .container-economy {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-economy {
+            padding-left: 20px;
+        }
+
+        .text-economy h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 62.25px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .text-economy p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 17.44px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .text-economy a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #007bff;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .text-economy a:hover {
+            color: #0056b3;
+            text-decoration: underline; /* Sublinha ao passar o mouse */
+        }
+          /* Parte 3: Estilização da seção principal com conteúdo de imagem e texto. Usa grid para posicionar a imagem e o texto lado a lado. Define estilos para a imagem, títulos (h1) e parágrafos (p), e um botão. */
+        .image-economy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-economy img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Parte 4: Estilização do rodapé. Define fundo, cor, preenchimento, layout flexbox para alinhar horizontalmente o logo, texto e ícones de redes sociais. */
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .logo-footer {
+            width: 50px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        footer .footer-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons {
+            margin-right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        footer .social-icons img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    /* Parte 5: O código HTML mostra o cabeçalho e o início da página principal do site. Inclui logo, menu de navegação, e uma introdução com imagem e texto. 
+ */
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo">
+            <img src="v17_4.png" alt="Logo Inova Colders">
+            <img class="logo-text" src="Captura de tela 2024-11-28 092745.png" alt="Texto da logo Inova Colders">
+        </div>
+        <nav>
+            <a href="sobre.html">Sobre</a>
+            <a href="suporte.html">Ajuda</a>
+            <a href="loja.html">Loja</a>
+            <a href="suporte.html">Suporte</a>
+            <a href="carona.html">Trabalhos</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="image-content">
+            <img src="v7_413.png" alt="Mão robótica segurando um átomo iluminado">
+        </div>
+        <div class="text-content">
+            <h1>Venha conhecer<br>Nosso projeto sustentável!</h1>
+            <p>Faça parte de nossa causa por um mundo melhor.<br>
+               Somente o seu engajamento pode salvar o nosso planeta.</p>
+            <a href="sobre.html" class="button">Saiba Mais</a>
+        </div>
+    </div>
+
+    <!-- Parte do Motor Híbrido -->
+    <div class="container">
+        <div class="text">
+            <h1><span class="motor">Motor</span><span class="hibrido">Híbrido</span></h1>
+            <p>
+                Um motor híbrido é uma tecnologia de propulsão que combina um motor a combustão interna 
+                (geralmente a gasolina ou diesel) com um motor elétrico. Essa combinação permite que o veículo 
+                aproveite o melhor de cada fonte de energia, reduzindo o consumo de combustível e as emissões 
+                de poluentes.
+            </p>
+            <a href="sobre.html">Ir para Mais Informações →</a>
+        </div>
+        <div class="image">
+            <img src="kia-sportage-hybrid-2023-1645702877905_v2_900x506.jpg" alt="Carro híbrido">
+        </div>
+    </div>
+
+    <!-- Parte do Motor Movido a Água -->
+    <div class="container-water">
+        <div class="image-water">
+            <img src="Toyota-Mirai-Portada-2048x1229.jpg" alt="Motor movido a água">
+        </div>
+        <div class="text-water">
+            <h1><span class="motor-water">Motor</span><span class="agua-water">movido a água</span></h1>
+            <p>
+                Os motores movidos a água, ou motores a hidrogênio, utilizam a eletrólise da água para separar 
+                hidrogênio e oxigênio. O hidrogênio gerado pode ser queimado ou usado em células de combustível, 
+                produzindo eletricidade com emissões mínimas. As vantagens incluem baixas emissões e a abundância 
+                da água como recurso. No entanto, desafios como eficiência e falta de infraestrutura ainda precisam 
+                ser superados. Essa tecnologia tem potencial em transportes e geração de energia, representando uma 
+                alternativa sustentável aos combustíveis fósseis.
+            </p>
+            <a href="sobre.html">Ir para Mais Informações →</a>
+        </div>
+    </div>
+
+    <!--Parte da Economia Regenerativa -->
+    <div class="container-economy">
+        <div class="text-economy">
+            <h1>Economia <span class="motor">Regenerativa</span></h1>
+            <p>
+                A economia regenerativa é um modelo que visa restaurar, renovar e manter o equilíbrio ecológico 
+                por meio de práticas sustentáveis. Ao focar na reutilização de recursos e minimização de resíduos, 
+                esse modelo busca criar sistemas que não apenas reduzem os danos ao meio ambiente, mas também 
+                contribuem ativamente para a sua recuperação.
+            </p>
+            <a href="sobre.html">Ir para Mais Informações →</a>
+        </div>
+        <div class="image-economy">
+            <img src="Captura de tela 2024-12-03 093902.png" alt="Imagem Economia Regenerativa">
+        </div>
+    </div>
+
+    <footer>
+        <img src="v17_4.png" alt="Logo Inova Colders" class="logo-footer">
+        <div class="footer-text">
+            <p>© <script>document.write(new Date().getFullYear());</script> Inova Colders. Todos os direitos reservados.</p>
+            <p>
+                <a href="politica.html">Política de Privacidade</a> |
+                <a href="politica.html">Termos de Uso</a> |
+                <a href="suporte.html">Contato</a>
+            </p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="download (2).png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="pngtree-instagram-social-platform-icon-png-image_8704818.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+                <img src="x-twitter-light-grey-logo-5694251.png" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

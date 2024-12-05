@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inova Colders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: black;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: black;
+    }
+    header .logo {
+      height: auto;
+      width: 150px;
+    }
+    header .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      position: relative;
+      height: calc(100vh - 40px);
+      padding-top: 40px;
+      background-color: black;
+    }
+    .hero .background-image {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero .background-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    .hero .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin: 10px 0;
+    }
+    .hero p {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .hero .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+    .hero .btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Estilos da nova seção */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .text {
+      text-align: justify;
+      font-size: 16px;
+      font-family: 'Lora', serif;
+    }
+
+    .contact-section {
+      margin-top: 40px;
+      border-top: 1px solid white;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .contact-section p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .contact-section a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: transparent;
+      border: 2px solid white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Captura de tela 2024-11-28 092745.png" alt="Logo Inova Colders">
+  </div>
+  <nav>
+    <a href="sobre.html">Sobre</a>
+    <a href="suporte.html">Ajuda</a>
+    <a href="carona.html">Trabalhos</a>
+    <a href="suporte.html">Suporte</a>
+    <a href="cadastro.html">Entrar</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="background-image">
+    <img src="piotr-chrobot-6oUsyeYXgTg-unsplash.jpg" alt="Imagem da cidade">
+  </div>
+  <div class="content">
+    <h1>FAÇA SEU CADASTRO</h1>
+    <p>Se você trabalha na Cidade, não deixe de fazer seu cadastro para participar da Carona Solidária realizada pela Inova Colders.</p>
+    <a href="cadastro.html" class="btn">FAÇA SEU CADASTRO</a>
+  </div>
+</section>
+
+  <div class="container">
+    <section>
+      <h1 class="section-title">SOBRE A CARONA SOLIDÁRIA</h1>
+      <p class="text">
+        O projeto Carona Solidária Inova Natura é uma iniciativa que tem como objetivo conscientizar os trabalhadores sobre os benefícios que a prática pode gerar aos adeptos e ao meio ambiente. A ideia do sistema é incentivar o hábito da carona diminuindo a circulação de automóveis nas metrópoles em todo o Brasil. A plataforma virtual depende inteiramente da adesão voluntária e proativa dos participantes para fornecer ou solicitar carona e realizar buscas para efetivá-las. É necessário o cadastro dos nossos clientes, que facilita essa interação. Os adeptos poderão realizar o cadastro utilizando um e-mail.
+      </p>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="section-title">CONTATO</h2>
+      <p>Entre em contato através do comentário ou envie um e-mail para:</p>
+      <p><a href="mailto:inovacolders@mail.com">inovacolders@mail.com</a></p>
+      <a href="cadastro.html" class="button">DEIXAR COMENTÁRIO</a>
+    </section>
+  </div>
+</body>
+</html>

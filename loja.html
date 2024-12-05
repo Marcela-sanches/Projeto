@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inova Colders - Loja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: white;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header .logo {
+      max-width: 150px;
+      height: auto;
+    }
+
+    header .logo img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-cart {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-cart input[type="text"] {
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+
+    .content h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      --font-color: #323232;
+      --font-color-sub: #666;
+      --bg-color: #fff;
+      --main-color: #323232;
+      --main-focus: #2d8cf0;
+      width: 230px;
+      height: auto;
+      background: var(--bg-color);
+      border: 2px solid var(--main-color);
+      box-shadow: 4px 4px var(--main-color);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      gap: 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 10px;
+    }
+
+    .card:last-child {
+      justify-content: flex-end;
+    }
+
+    .card-img {
+      transition: all 0.5s;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .card-img img {
+      max-width: 100%;
+      max-height: 150px;
+      display: block;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .card-img .img::before,
+    .card-img .img::after {
+      display: none;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      color: var(--font-color);
+      margin-bottom: 5px;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--font-color-sub);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .card-divider {
+      width: 100%;
+      border: 1px solid var(--main-color);
+      border-radius: 50px;
+      margin: 10px 0;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-price {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--font-color);
+    }
+
+
+    .card-btn {
+      background: var(--bg-color);
+      border: 2px solid var(--main-color);
+      border-radius: 5px;
+      padding: 8px 15px;
+      transition: all 0.3s;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      color: #333; /* Cor preta para o texto */
+    }
+
+    .card-btn:visited {
+      color: #333; /* Mantém a cor preta após a visita */
+    }
+
+    .card-btn:hover {
+      border: 2px solid var(--main-focus);
+      background-color: var(--main-focus);
+      color: white;
+    }
+
+    .card-img:hover {
+      transform: translateY(-3px);
+    }
+
+    .card-btn:active {
+      transform: translateY(3px);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="print2-removebg-preview.png" alt="Logo Inova Colders">
+  </div>
+  <nav>
+    <a href="pagina.html">Home</a>
+    <a href="suporte.html">Suporte</a>
+    <a href="loja.html">Roupas</a>
+    <a href="loja2.html">Acessórios</a>
+  </nav>
+  <div class="search-cart">
+    <input type="text" placeholder="Buscar...">
+  </div>
+</header>
+
+<div class="content">
+  <h1>ROUPAS</h1>
+  <p>006 Produtos</p>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-img">
+        <img src="bone bege.png" alt="Boné Estampa Bordada Coqueiro">
+      </div>
+      <div class="card-title">ACESSÓRIO PARA CABEÇA</div>
+      <div class="card-subtitle">Boné Estampa Bordada Coqueiro - Lá - Unissex<br>Cor - Bege</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-price">R$ 59,99</div>
+        <a href="produto1.html" class="card-btn">Comprar</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="camisapolo1.png" alt="Camisa Branca Logo Pássaro">
+      </div>
+      <div class="card-title">CAMISA</div>
+      <div class="card-subtitle">Camisa Branca Logo Pássaro - Lá - Polo</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-price">R$ 29,99</div>
+        <a href="produto2.html" class="card-btn">Comprar</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="camisaverde.png" alt="Camisa Polo Verde Escura">
+      </div>
+      <div class="card-title">CAMISA</div>
+      <div class="card-subtitle">Camisa Polo Verde Escura, Estampa Logo Coqueiro - Algodão</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-price">R$ 29,99</div>
+        <a href="produto3.html" class="card-btn">Comprar</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="moletom.png" alt="Moletom Estampa Logo Inova Colders">
+      </div>
+      <div class="card-title">MOLETOM</div>
+      <div class="card-subtitle">Moletom Estampa Logo Inova Colders Dragão - Unissex - Algodão</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-price">R$ 119,99</div>
+        <a href="produto5.html" class="card-btn">Comprar</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="camisa.png" alt="Camiseta Estampa Logo Inova Colders">
+      </div>
+      <div class="card-title">CAMISA</div>
+      <div class="card-subtitle">Camiseta Estampa Logo Inova Colders Dragão - Unissex - Algodão</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-price">R$ 29,99</div>
+        <a href="produto6.html" class="card-btn">Comprar</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <img src="thumbnail_bone.png" alt="Boné Estampa Logo Inova Colders">
+      </div>
+      <div class="card-title">ACESSÓRIO PARA CABEÇA</div>
+      <div class="card-subtitle">Boné Estampa Logo Inova Colders Dragão - Unissex - Algodão</div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-price">R$ 59,99</div>
+        <a href="produto6.html" class="card-btn">Comprar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
